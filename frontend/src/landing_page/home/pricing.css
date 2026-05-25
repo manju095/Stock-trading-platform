@@ -1,0 +1,30 @@
+.col1 {
+  flex: 5;
+}
+
+.col2 {
+  flex: 7;
+}
+
+.pricingBox img {
+  height: 130px;
+  width: 130px;
+  display: inline-block;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pricingBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.pricingBox p {
+  font-size: 11px;
+  display: inline-block;
+}

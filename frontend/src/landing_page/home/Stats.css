@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+}

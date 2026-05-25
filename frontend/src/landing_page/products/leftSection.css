@@ -1,0 +1,65 @@
+.image {
+  display: flex;
+  align-items: center;
+}
+
+.col-6 .bigImg {
+  width: 100%;
+}
+
+/* @media (min-width: 800px) and (max-width: 1000px) {
+  .col-6 .bigImg {
+    width: 400px !important;
+    height: 350px !important;
+  }
+
+  .col-6 .smallImg {
+    width: 400px !important;
+    height: 350px !important;
+  }
+}*/
+
+.col-6 .smallImg {
+  width: 60%;
+}
+
+.col-5 div {
+  font-size: 1.2em;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.badges img {
+  height: 70px;
+  width: 180px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.col-5 {
+  line-height: 1.8;
+}
+
+div .links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  margin-bottom: 50px;
+}
+
+.section {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .section .col-6 {
+    order: 1; /* image always first */
+  }
+
+  .section .col-5 {
+    order: 2; /* text after image */
+  }
+}

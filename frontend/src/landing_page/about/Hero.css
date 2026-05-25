@@ -1,0 +1,20 @@
+div .aboutPara {
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aboutHero {
+  padding: 50px 40px 50px;
+}
+
+@media (max-width: 800px) {
+  .box2 {
+    width: 100%;
+    padding: 0;
+  }
+}

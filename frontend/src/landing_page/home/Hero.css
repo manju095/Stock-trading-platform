@@ -1,0 +1,18 @@
+.row img {
+  width: 750px;
+}
+
+.row button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.btn {
+  color: white;
+  background-color: #387ed1;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}

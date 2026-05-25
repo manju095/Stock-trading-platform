@@ -1,0 +1,37 @@
+.accordion-header .accordion-button {
+  width: 100%;
+  background-color: transparent !important;
+}
+
+.accordion-header .accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordian-item {
+  margin: 8px 0;
+}
+
+.accordion-header .accordion-button:not(.collapsed) {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-body ul li a {
+  font-size: 0.7em;
+  color: #397dd0;
+}
+
+.accordion-body ul {
+  color: #397dd0;
+}
+
+.accordion-body ul li::marker {
+  font-size: 16px;
+}
+
+.accordion-body ul li a:hover {
+  color: rgb(75, 72, 72);
+}
+
+.left-box i {
+  color: #397dd0;
+}

@@ -1,0 +1,57 @@
+.navbar-brand img {
+  width: 160px;
+  padding: 10px;
+}
+
+.navbar-brand {
+  width: 10%;
+}
+
+.nav-link:hover {
+  color: #387ed1;
+}
+
+.extra-hamburger {
+  width: 28px;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kite:hover {
+  a img {
+    opacity: 0.6;
+  }
+
+  a h4 {
+    color: #387ed1;
+  }
+}
+
+.kiteConnect:hover {
+  a img {
+    opacity: 0.6;
+  }
+
+  a h4 {
+    color: #387ed1;
+  }
+}

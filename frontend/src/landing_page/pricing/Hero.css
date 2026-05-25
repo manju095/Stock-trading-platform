@@ -1,0 +1,16 @@
+.charges-header {
+  padding: 100px 20px;
+}
+
+.pricingImg img {
+  height: 250px;
+  width: 350px;
+}
+
+.pricingImg h1 {
+  font-size: 30px;
+}
+
+.pricingImg p {
+  font-size: 20px;
+}
