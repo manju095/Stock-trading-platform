@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.svg";
-import "./navbar.css";
+import "./Navbar.css";
 import { useState } from "react";
 import kite from "../assets/images/kite-logo.svg";
 import kiteConnect from "../assets/images/kite-connect.svg";
