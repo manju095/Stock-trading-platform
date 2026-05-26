@@ -11,6 +11,8 @@ export default function Login() {
 
   const [searchParams] = useSearchParams();
   const [flashMessage, setFlashMessage] = useState("");
+  const app2Url = import.meta.env.VITE_APP2_URL || "http://localhost:5174";
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
   const handleLoginClick = async (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ export default function Login() {
 
     try {
       await axios.post(
-        "http://localhost:3002/login",
+        `${apiUrl}/login`,
         {
           username: username,
           password: password,
@@ -29,13 +31,13 @@ export default function Login() {
       );
       toast.success("Logged in successfully!");
       setTimeout(() => {
-        window.location.assign("http://localhost:5174/");
+        window.location.assign(`${app2Url}/`);
       }, 2000);
     } catch (err) {
       console.log(err);
-      if(err.response) {
+      if (err.response) {
         toast.error("Invalid username or password");
-      }else if(err.request) {
+      } else if (err.request) {
         toast.error("Server is currently offline. Please try again later.");
       }
     }

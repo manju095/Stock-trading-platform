@@ -9,9 +9,11 @@ import TopBar from "./TopBar";
 export default function Home() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
+
   useEffect(() => {
     axios
-      .post("http://localhost:3002/verifyUser", { withCredentials: true })
+      .post(`${apiUrl}/verifyUser`, { withCredentials: true })
       .then((res) => {
         if (res.data.status) {
           console.log(res.data);

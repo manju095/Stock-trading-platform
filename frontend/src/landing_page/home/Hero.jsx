@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import homeHero from "../../assets/images/homeHero.png";
 import "./Hero.css";
 
@@ -12,7 +13,9 @@ export default function Hero() {
           Online platform to invest in stocks, derivatives, mutual funds, ETFs,
           bonds, and more.
         </p>
-        <button className=" btn  fs-5 my-4">Sign up for free</button>
+        <Link to="/signup">
+          <button className=" btn  fs-5 my-4">Sign up for free</button>
+        </Link>
       </div>
     </div>
   );

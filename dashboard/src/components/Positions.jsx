@@ -4,9 +4,10 @@ import axios from "axios";
 
 export default function Positions() {
   const [allPositions, setAllPositions] = useState([]);
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allPositions").then((res) => {
+    axios.get(`${apiUrl}/allPositions`).then((res) => {
       console.log(res.data);
       setAllPositions(res.data);
     });

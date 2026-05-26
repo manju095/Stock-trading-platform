@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 
 export default function ProtectedRoute({ user, loading, children }) {
+  const app1Url = import.meta.env.VITE_APP1_URL || "http://localhost:5173";
+
   useEffect(() => {
     if (!loading && !user) {
       const message = encodeURIComponent("Please log in to access that page.");
-      window.location.href = `http://localhost:5173/login?message=${message}`;
+      window.location.href = `${app1Url}/login?message=${message}`;
     }
   }, [user, loading]);
 

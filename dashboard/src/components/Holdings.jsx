@@ -8,42 +8,43 @@ import { VerticalGraph } from "./VerticalGraph";
 
 export default function Holdings() {
   const [allHoldings, setAllHoldings] = useState([]);
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get(`${apiUrl}/allHoldings`).then((res) => {
       console.log(res.data);
       setAllHoldings(res.data);
     });
   }, []);
 
-//   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-const labels = allHoldings.map((subArray) => subArray["name"]);
+  //   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  const labels = allHoldings.map((subArray) => subArray["name"]);
 
-const data = {
-  labels,
+  const data = {
+    labels,
     datasets: [
       {
         label: "Stock Price",
         data: allHoldings.map((stock) => stock.price),
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-  ],
-}
-// export const data = {
-//   labels,
-//   datasets: [
-//     {
-//       label: 'Dataset 1',
-//       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-//       backgroundColor: 'rgba(255, 99, 132, 0.5)',
-//     },
-//     {
-//       label: 'Dataset 2',
-//       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-//       backgroundColor: 'rgba(53, 162, 235, 0.5)',
-//     },
-//   ],
-// };
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
+  // export const data = {
+  //   labels,
+  //   datasets: [
+  //     {
+  //       label: 'Dataset 1',
+  //       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+  //       backgroundColor: 'rgba(255, 99, 132, 0.5)',
+  //     },
+  //     {
+  //       label: 'Dataset 2',
+  //       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+  //       backgroundColor: 'rgba(53, 162, 235, 0.5)',
+  //     },
+  //   ],
+  // };
 
   return (
     <>
@@ -108,7 +109,7 @@ const data = {
           <p>P&L</p>
         </div>
       </div>
-      <VerticalGraph data={data}/>
+      <VerticalGraph data={data} />
     </>
   );
 }

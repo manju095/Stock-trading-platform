@@ -20,7 +20,10 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+const originsString =
+  process.env.ALLOWED_ORIGINS || "http://localhost:5173,http://localhost:5174";
+// const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+const allowedOrigins = originsString.split(",");
 
 app.use(
   cors({

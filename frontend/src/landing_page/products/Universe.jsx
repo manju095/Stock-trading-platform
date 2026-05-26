@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import zerodhaFundHouse from "../../assets/images/zerodhaFundhouse.png";
 import sensibullLogo from "../../assets/images/sensibullLogo.svg";
 import tijori from "../../assets/images/tijori.svg";
@@ -60,9 +61,11 @@ export default function Universe() {
             mis-selling.{" "}
           </p>
         </div>
-        <button className=" btn btn-primary fs-5 my-4 mt-3 ">
-          Sign up for free
-        </button>
+        <Link to="/signup">
+          <button className=" btn btn-primary fs-5 my-4 mt-3 ">
+            Sign up for free
+          </button>
+        </Link>
       </div>
     </div>
   );

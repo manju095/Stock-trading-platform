@@ -8,6 +8,8 @@ export default function SignUp() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const app2Url = import.meta.env.VITE_APP2_URL || "http://localhost:5174";
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
   const handleSignupClick = async (e) => {
     e.preventDefault();
@@ -15,7 +17,7 @@ export default function SignUp() {
 
     try {
       await axios.post(
-        "http://localhost:3002/signup",
+        `${apiUrl}/signup`,
         {
           username: username,
           email: email,
@@ -27,7 +29,7 @@ export default function SignUp() {
       );
       toast.success("Account created successfully!");
       setTimeout(() => {
-        window.location.assign("http://localhost:5174/");
+        window.location.assign(`${app2Url}/`);
       }, 2000);
     } catch (err) {
       console.log(err);

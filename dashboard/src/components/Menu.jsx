@@ -8,13 +8,15 @@ import { toast } from "react-toastify";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const app1Url = import.meta.env.VITE_APP1_URL || "http://localhost:5173";
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3002/logout");
+      await axios.get(`${apiUrl}/logout`);
       toast.success("Logged out successfully.");
       setTimeout(() => {
-        window.location.assign("http://localhost:5173/");
+        window.location.assign(`${app1Url}/`);
       }, 1000);
     } catch (err) {
       toast.error(err);

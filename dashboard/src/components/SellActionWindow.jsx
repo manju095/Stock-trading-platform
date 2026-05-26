@@ -11,10 +11,11 @@ export default function SellActionWindow({ uid }) {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const generalContext = useContext(GeneralContext);
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
   const handleSellClick = async () => {
     try {
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post(`${apiUrl}/newOrder`, {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
